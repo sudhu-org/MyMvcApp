@@ -44,14 +44,14 @@ jobs:
       #     docker build -t $IMAGE .
       #     docker tag $IMAGE ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest
 
-      - name: Push image
-        run: |
-          docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:sha-${{ github.sha }}
-          docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest
-
       # - name: Push image
       #   run: |
-      #     docker push mymvcapp:latest 
+      #     docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:sha-${{ github.sha }}
+      #     docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest
+
+      - name: Push image
+        run: |
+          docker push ghcr.io/mymvcapp:latest
 
 
       # - name: Upload image details
