@@ -49,10 +49,15 @@ jobs:
       #     docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:sha-${{ github.sha }}
       #     docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest
 
-      - name: Upload image details
-        uses: actions/upload-artifact@v4
-        with:
-          name: image-info
-          path: |
-            image_name.txt
+      - name: Push image
+        run: |
+          docker push mymvcapp:latest
+
+
+      # - name: Upload image details
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: image-info
+      #     path: |
+      #       image_name.txt
         # (optional) create an artifact or use outputs for downstream jobs
