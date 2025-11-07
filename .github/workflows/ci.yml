@@ -51,7 +51,7 @@ jobs:
 
       - name: Push image
         run: |
-          docker push mymvcapp:latest .
+          docker push mymvcapp:latest 
 
 
       # - name: Upload image details
